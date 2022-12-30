@@ -1,0 +1,37 @@
+.product-card{
+  width: 90%;
+  margin: 0 auto;
+}
+.product-card img{
+  width: 240px;
+  height: 240px;
+  border-radius: 20px;
+  object-fit: cover;/*image no change your resolution or pixelaje*/
+  cursor: pointer;
+}
+.product-info{
+  margin-top: 12px;
+  display: flex;
+  justify-content: space-between;
+}
+.product-info figure{/*quede netx to right the shop image*/
+  margin-top: 0px;
+}
+.product-info figure img{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+}
+.product-info div p:nth-child(1){/*quede netx to right the shop image*/
+  font-size: 14px;
+  line-height: 22px;
+  font-weight: bold;
+  margin: 0px;
+}
+.product-info div p:nth-child(2){/*quede netx to right the shop image*/
+  font-size: 14px;
+  color: #6c6464;
+  margin: 0px;
+}
+
+

@@ -1,0 +1,100 @@
+<div class="show-mobile">
+  <div>
+    <button (click)="toggleSideBar()">
+      <img src="../../../assets/icons/icon_menu.svg" alt="menu">
+    </button>
+    <a href="">
+      <img src="../../../assets/logos/logo_yard_sale.svg" alt="logo">
+    </a>
+    <div class="cart">
+      <a href="">
+        <img src="../../../assets/icons/icon_shopping_cart.svg" alt="logo">
+      </a>
+      <span class="counter">{{shoppingCart.length}}</span>
+    </div>
+  </div>
+
+  <div class="side-menu" [class.active]="activeMenu">
+    <div class="mobile-menu">
+      <button (click)="toggleSideBar()">
+        <img src="../../../assets/icons/icon_menu.svg" alt="menu">
+      </button>
+
+      <ul class="nth-child1">
+          <li>
+              <a href="/" class="tittle">CATEGORIES</a>
+          </li>
+
+          <li>
+            <a routerLink="home">All</a>
+          </li>
+
+          <li *ngFor="let element of categories">
+            <a [routerLink]="['/category',element.id]">{{element.name}}</a>
+          </li>
+      </ul>
+
+      <ul>
+          <li>
+              <a href="/" class="tittle">My orders</a>
+          </li>
+
+          <li>
+              <a href="/" class="tittle">My account</a>
+          </li>
+      </ul>
+
+      <ul>
+          <li>
+              <a href="/" class="email-mobile">gato@matias.com</a>
+          </li>
+
+          <li>
+              <a href="/" class="signout">Sign out</a>
+          </li>
+      </ul>
+  </div>
+
+  </div>
+
+</div>
+
+
+<div class="hide-mobile">
+
+    <nav>
+
+
+      <div class="navbar-left">
+        <img src="../../../assets/logos/logo_yard_sale.svg" alt="" class="logo-nav">
+
+        <ul>
+          <li><a routerLinkActive="active" routerLink="home">All</a></li>
+          <li *ngFor="let element of categories">
+            <a routerLinkActive="active" [routerLink]="['/category',element.id]">{{element.name}}</a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="navbar-right">
+        <ul>
+          <li class="navbar-email">gato@matias.com
+              <img src="../../../assets/icons/flechita.svg" alt="">
+          </li>
+
+          <li class="navbar-email-tablet">Profile
+            <img src="../../../assets/icons/flechita.svg" alt="">
+          </li>
+
+          <li class="navbar-shopping-card">
+            <img src="../../../assets/icons/icon_shopping_cart.svg" alt="logo">
+            <div>{{shoppingCart.length}}</div>
+          </li>
+        </ul>
+      </div>
+    </nav>
+</div>
+
+
+
+

@@ -1,0 +1,19 @@
+<div class="container-products">
+  <p>Total:{{size}}</p>
+  <p>Total Price: ${{total}}</p>
+
+  <p>Today is:{{today|date:'short'}}</p>
+
+  <section class="container-product">
+    <app-product
+    [product]="element"
+
+    *ngFor="let element of products"
+
+    (addedProduct)="onAddToShoppingCart($event)"
+    ></app-product>
+
+    <button *ngIf="products.length==10" (click)="loadMore()">Next Page</button>
+    <button *ngIf="products.length<10" >Return Page</button>
+  </section>
+</div>

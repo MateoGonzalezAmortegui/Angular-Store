@@ -1,0 +1,14 @@
+<article class="product-card">
+  <img [routerLink]="['/product',product.id]" [src]="product.images">
+
+  <div class="product-info">
+    <div>
+      <p>{{product.title}}</p>
+      <p>${{product.price| currency:'COP'}}</p>
+    </div>
+
+    <figure (click)="onAddToCart()">
+      <img src="../../../assets/icons/bt_add_to_cart.svg">
+    </figure>
+  </div>
+</article>

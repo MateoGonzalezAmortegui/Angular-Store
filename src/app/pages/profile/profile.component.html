@@ -1,0 +1,20 @@
+<div *ngIf="user" class="login"><!--center all the elements-->
+  <div class="form-container-account"><!--encapsula all the elements-->
+
+      <h1 class="tittle-account">My account</h1>
+
+      <form action="/" class="form account">
+          <div class="form-account-div">
+              <label for="name" class="label">Name</label><!--for == id-->
+              <p class="value">{{user.name}}</p>
+
+              <label for="email" class="label">Email</label><!--for == id-->
+              <p class="value">{{user.email}}</p>
+
+              <label for="password" class="label">Password</label><!--for == id-->
+              <p class="value">{{user.password}}</p>
+          </div>
+          <input type="submit" value="Edit" class="secondary-button">
+      </form>
+  </div>
+</div>
