@@ -1,6 +1,9 @@
 .product-card{
   width: 90%;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 .product-card img{
   width: 240px;
@@ -12,7 +15,6 @@
 .product-info{
   margin-top: 12px;
   display: flex;
-  justify-content: space-between;
 }
 .product-info figure{/*quede netx to right the shop image*/
   margin-top: 0px;
@@ -34,4 +36,9 @@
   margin: 0px;
 }
 
+@media screen and (max-width:893px) {
+  .product-card img{
+    width: 80%;
+  }
+}
 

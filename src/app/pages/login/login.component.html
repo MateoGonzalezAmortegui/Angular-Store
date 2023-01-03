@@ -1,1 +1,54 @@
-<p>login works!</p>
+<!-- <p>
+  Phone: {{ phoneField.value }} type="number"
+  <input type="tel" [formControl]="phoneField"/>
+</p>
+
+<select [formControl]="phoneField">
+  <option value="cat1">cat1</option>
+  <option value="cat2">cat2</option>
+  <option value="cat3">cat3</option>
+</select>
+
+<input [class.valid]="fieldvalid"
+type="checkbox" [formControl]="phoneField">
+
+<label>
+  <input  name="cat" type="radio" value="cats" [formControl]="phoneField">
+  cats
+</label>
+are different
+<label>
+  <input  name="maths" type="radio" value="c" [formControl]="phoneField">
+  cats
+</label>
+
+<p>
+  <strong *ngIf="fieldValid">error</strong>
+</p>
+-->
+
+  <p>
+    <input type="search" [formControl]="nameField">
+    Name:
+  </p>
+
+  <p>
+    <strong *ngIf="fieldValid">
+      Este campo es requerido
+    </strong>
+  </p>
+
+  <p>
+    <strong *ngIf="emailField.touched && emailField.hasError('email')">
+      Esto no es un emial valido
+    </strong>
+  </p>
+<p>
+  <input type="email" [formControl]="emailField">c
+</p>
+
+<p>
+  {{nameField.value}}
+</p>
+
+<button [disabled]="nameField.invalid" >get value</button>

@@ -2,8 +2,6 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Product } from '../../models/product.module';
 
 import { StoreService } from 'src/app/services/store.service';
-import { ProductsService } from 'src/app/services/products.service';
-
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
@@ -14,12 +12,12 @@ export class ProductsComponent {
   shoppingCart:Product[]=[];
   total:number=0;
   size:number=0;
+  newPage:number=0;
 
   @Input() products: Product[] = []
 
   constructor(
     private storeService:StoreService,
-    private productsService:ProductsService
   ) {
     this.shoppingCart = storeService.getShoppingCart();
   }

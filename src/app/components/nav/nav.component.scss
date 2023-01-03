@@ -61,8 +61,8 @@ nav{
 }
 .navbar-left ul li a, .navbar-right ul li a{
   text-decoration: none;
-  color: #C7C7C7;
-  border: 1px solid white;
+  /* color: #C7C7C7; */
+  /* border: 1px solid white; */
   border-radius: 8px;
   padding: 8px;
 }
@@ -98,7 +98,6 @@ nav{
   justify-content: center;
   align-items: center;
 }
-
 
 @media screen and (max-width:63.9374em) {
 
@@ -170,6 +169,8 @@ nav{
   text-decoration: none;
   color: black;
   font-weight: bold;
+  border-radius: 8px;
+  padding: 8px;
 }
 .mobile-menu ul{
   padding: 0;
@@ -188,5 +189,11 @@ nav{
 }
 .mobile-menu .signout{ /*more specific for the specificidad*/
   font-size: 14px;
+  color: #0FFF50;
+}
+
+
+.links{
+  border: 1px solid #0FFF50;
   color: #0FFF50;
 }

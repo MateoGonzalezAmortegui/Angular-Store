@@ -26,11 +26,11 @@
           </li>
 
           <li>
-            <a routerLink="home">All</a>
+            <a routerLinkActive="links" routerLink="home" (click)="toggleSideBar()">All</a>
           </li>
 
           <li *ngFor="let element of categories">
-            <a [routerLink]="['/category',element.id]">{{element.name}}</a>
+            <a routerLinkActive="links" (click)="toggleSideBar()" [routerLink]="['/category',element.id]">{{element.name}}</a>
           </li>
       </ul>
 
@@ -69,9 +69,9 @@
         <img src="../../../assets/logos/logo_yard_sale.svg" alt="" class="logo-nav">
 
         <ul>
-          <li><a routerLinkActive="active" routerLink="home">All</a></li>
+          <li><a routerLinkActive="links" routerLink="home">All</a></li>
           <li *ngFor="let element of categories">
-            <a routerLinkActive="active" [routerLink]="['/category',element.id]">{{element.name}}</a>
+            <a routerLinkActive="links" [routerLink]="['/category',element.id]">{{element.name}}</a>
           </li>
         </ul>
       </div>

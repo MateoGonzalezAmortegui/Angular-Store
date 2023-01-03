@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-login',
@@ -7,4 +8,21 @@ import { Component } from '@angular/core';
 })
 export class LoginComponent {
 
+  emailField = new FormControl('',[Validators.required,Validators.email]);
+  nameField = new FormControl('', Validators.required);
+
+  /* ngOnInit(){
+    this.nameField.valueChanges.
+    subscribe(value=>{
+      this.nameField=value
+    })
+  } */
+
+  get fieldValid(){
+    return this.emailField.touched && this.emailField.hasError('required');
+  }
+
+  send(){
+    this.nameField.value;
+  }
 }

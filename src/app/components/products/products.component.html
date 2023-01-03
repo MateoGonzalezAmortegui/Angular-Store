@@ -1,6 +1,6 @@
 <div class="container-products">
   <p>Total:{{size}}</p>
-  <p>Total Price: ${{total}}</p>
+  <p>Total Price: ${{total | currency:'COP'}}</p>
 
   <p>Today is:{{today|date:'short'}}</p>
 
@@ -12,8 +12,7 @@
 
     (addedProduct)="onAddToShoppingCart($event)"
     ></app-product>
-
-    <button *ngIf="products.length==10" (click)="loadMore()">Next Page</button>
-    <button *ngIf="products.length<10" >Return Page</button>
   </section>
 </div>
+
+<button class="primary-button" *ngIf="products.length==10" (click)="loadMore()">Next Page</button>
