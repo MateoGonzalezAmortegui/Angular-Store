@@ -4,8 +4,8 @@ import { ProductsService } from 'src/app/services/products.service';
 import { Product } from 'src/app/models/product.module';
 
 import { Location } from '@angular/common';
-
-
+import SwiperCore, { Navigation, Pagination, Scrollbar, Autoplay } from 'swiper';
+SwiperCore.use([Navigation, Pagination, Scrollbar, Autoplay]);
 import { StoreService } from 'src/app/services/store.service';
 
 @Component({
@@ -14,7 +14,6 @@ import { StoreService } from 'src/app/services/store.service';
   styleUrls: ['./product-detail.component.scss']
 })
 export class ProductDetailComponent implements OnInit{
-
 
   productId: string|null=null
   product: Product|null = null

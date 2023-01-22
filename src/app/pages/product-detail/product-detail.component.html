@@ -8,7 +8,11 @@
 
   <div class="detail" *ngIf="product">
     <div class="gallery">
-      <swiper [slidesPerView]="1" [autoHeight]="true">
+      <swiper [slidesPerView]="1" [autoHeight]="true"
+      [navigation]="true"
+      [pagination]="{ clickable: true}"
+      [scrollbar]="{ draggable: true }"
+      [autoplay]="true">
         <ng-template swiperSlide *ngFor="let image of product?.images">
           <img [src]="image" [alt]="product.title">
         </ng-template>
